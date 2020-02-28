@@ -1,5 +1,9 @@
 # This repository is no longer maintained original repo https://github.com/Gr4ffy/lede-cups.git
 
+# How to install Cups on OpenWrt/LEDE
+https://github.com/TheMMcOfficial/cups-for-openwrt
+
+# How to compile the Packages
 git clone https://github.com/lede-project/source
 
 cd source
