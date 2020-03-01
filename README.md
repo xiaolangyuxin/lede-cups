@@ -8,6 +8,7 @@ This is a playground for one of my systems and mostly _UNMAINTAINED_. Check Upst
 * Original: https://github.com/Gr4ffy/lede-cups
 * Via: https://github.com/lllrrr/lede-cups
 * Maintained: https://github.com/TheMMcOfficial/lede-cups (yes, even if it says it's not ;))
+  * How-To: https://github.com/TheMMcOfficial/cups-for-openwrt
 
 ## Installation
 * git clone https://git.openwrt.org/openwrt/openwrt.git
