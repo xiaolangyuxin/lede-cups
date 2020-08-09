@@ -21,7 +21,6 @@ make
 
 copy /source/bin/packages/[PLATFORM]/cups/*.ipk to machine & opkg install 
 ```
-# Version of cups
 
 In any case:
 ## If you just want to attach your printer and use it from another PC using CUPS is most likely a bad idea
