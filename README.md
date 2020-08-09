@@ -1,8 +1,27 @@
-# CUPS for OpenWRT/LEDE
+# This repository is no longer maintained original repo https://github.com/Gr4ffy/lede-cups.git
 
-This is a playground for one of my systems and mostly _UNMAINTAINED_. It includes several filters required to convert and print locally on a OpenWRT based system. 
+# How to install Cups on OpenWrt/LEDE
+https://github.com/TheMMcOfficial/cups-for-openwrt
 
-If you just want to install CUPS and do not require additional filters check Upstream for a less fscked up version.
+# How to compile the Packages
+```
+git clone https://github.com/lede-project/source
+
+cd source
+
+echo "src-git cups https://github.com/TheMMcOfficial/lede-cups.git" >> feeds.conf.default
+
+./scripts/feeds update -a
+
+./scripts/feeds install -a
+
+make menuconfig (set Network->Printing->cups as "M")
+
+make
+
+copy /source/bin/packages/[PLATFORM]/cups/*.ipk to machine & opkg install 
+```
+# Version of cups
 
 In any case:
 ## If you just want to attach your printer and use it from another PC using CUPS is most likely a bad idea
@@ -32,19 +51,6 @@ In any case:
 ## Sources/Credits
 * Original: https://github.com/Gr4ffy/lede-cups
 * Via: https://github.com/lllrrr/lede-cups
-* Maintained: https://github.com/TheMMcOfficial/lede-cups (yes, even if it says it's not ;))
-  * How-To: https://github.com/TheMMcOfficial/cups-for-openwrt
-
-## Installation
-* git clone https://git.openwrt.org/openwrt/openwrt.git
-* cd openwrt
-* (if required git checkout ***version***)
-* echo "src-git cups https://github.com/adlerweb/lede-cups.git" >> feeds.conf.default
-* ./scripts/feeds update -a
-* ./scripts/feeds install -a
-* make menuconfig (set Network->Printing->cups as "M")
-* make
-* copy /source/bin/packages/[PLATFORM]/cups/*.ipk to machine & opkg install 
 
 ## Version of cups
 2.3.0
